@@ -295,9 +295,9 @@
                             Fleurs<br>
                             TEL : 070)111-2222<br>
                             FAX : 070)111-2234<br>
-                            ADDRESS : 서울특별시 서대문구 연희동 75<br>
+                            ADDRESS : 서울특별시 서대문구 연희동<br>
                         </p>
-                        <span>COPYRIGHT &copy; 2019 BY Fleurs ALL RIGHTS RESERVED</span>
+                        <span>COPYRIGHT &copy; 2022 BY Fleurs ALL RIGHTS RESERVED</span>
                     </div>
                 </div>
                 <div class="right">

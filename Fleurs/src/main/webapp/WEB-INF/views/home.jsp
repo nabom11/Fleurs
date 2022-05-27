@@ -31,9 +31,8 @@
                 <li><a href="#">PRODUCT</a></li>
                 <li><a href="#">COMMUNITY</a>
                     <ul class="sub">
-                        <li><a href="#">Notice</a></li>
-                        <li><a href="#">Magazine</a></li>
-                        <li><a href="#">Media</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">자유게시판</a></li>
                     </ul>
                 </li>
                 <li><a href="#">CUSTOMER</a>
@@ -56,9 +55,8 @@
                 <li><a href="#">PRODUCT</a></li>
                 <li><a href="#">COMMUNITY</a>
                     <ul class="sub">
-                        <li><a href="#">Notice</a></li>
-                        <li><a href="#">Magazine</a></li>
-                        <li><a href="#">media</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">자유게시판</a></li>
                     </ul>
                 </li>
                 <li><a href="#">CUSTOMER</a>

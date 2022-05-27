@@ -14,68 +14,9 @@
 	<script src="/js/script.js"></script>
 </head>
 <body>
-	<header>
-        <div class="logo">
-            <a href="#"><img src="img/logo.png" width="100" alt="">
-            </a>
-        </div>
-        <nav>
-            <ul class="main">
-                <li><a href="#">COMPANY</a>
-                    <ul class="sub">
-                        <li><a href="#">회사소개</a></li>
-                        <li><a href="#">회사연혁</a></li>
-                        <li><a href="#">오시는길</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">PRODUCT</a></li>
-                <li><a href="#">COMMUNITY</a>
-                    <ul class="sub">
-                        <li><a href="#">공지사항</a></li>
-                        <li><a href="#">자유게시판</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">CUSTOMER</a>
-                    <ul class="sub">
-                        <li><a href="#">매장안내</a></li>
-                        <li><a href="#">CS Center</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <div id="nav2">
-            <ul class="main">
-                <li><a href="#">COMPANY</a>
-                    <ul class="sub">
-                        <li><a href="#">회사소개</a></li>
-                        <li><a href="#">회사연혁</a></li>
-                        <li><a href="#">오시는길</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">PRODUCT</a></li>
-                <li><a href="#">COMMUNITY</a>
-                    <ul class="sub">
-                        <li><a href="#">공지사항</a></li>
-                        <li><a href="#">자유게시판</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">CUSTOMER</a>
-                    <ul class="sub">
-                        <li><a href="#">매장안내</a></li>
-                        <li><a href="#">CS Center</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-            <button id="menuBtn"><i class="fas fa-bars"></i></button>
-    </header>
     
-    <div class="fix_top">
-        <div class="wel">
-            <p>Fleurs</p>
-        </div>
-    </div>
-    
+	<%@include file="includes/header.jsp" %>
+	
     <div class="scroll_cts">
         <div id="contents">
             <div class="today">
@@ -282,29 +223,8 @@
             </div>
         </div>
         
-        <footer>
-            <div id="innerfooter">
-                <div class="left">
-                    <ul class="left-a">
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">CS CENTER</a></li>
-                        <li><a href="#">STORE</a></li>
-                    </ul>
-                    <div class="left-b">
-                        <p>
-                            Fleurs<br>
-                            TEL : 070)111-2222<br>
-                            FAX : 070)111-2234<br>
-                            ADDRESS : 서울특별시 서대문구 연희동<br>
-                        </p>
-                        <span>COPYRIGHT &copy; 2022 BY Fleurs ALL RIGHTS RESERVED</span>
-                    </div>
-                </div>
-                <div class="right">
-                    <img src="img/logo.png" width="150" alt="">  
-                </div>
-            </div>
-        </footer>
+        
+		<%@include file="includes/footer.jsp" %>
     </div>
 
 </body>

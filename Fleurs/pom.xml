@@ -78,6 +78,14 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        
+        <!-- Spring Security 사용을 위한 dependency 등록 Start -->
+		<!-- <dependency>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-starter-security</artifactId>
+	    </dependency> -->
+		<!-- Spring Security 사용을 위한 dependency 등록 End -->
+		
 	</dependencies>
 
 	<build>

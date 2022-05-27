@@ -578,14 +578,3 @@ footer {
         max-width: 100%;
     }
 }
-
-@media (min-width:767px) and (max-width:1017px) {
-    #sns article {
-        flex: 1 1 50%;
-        display: flex;
-    }
-}
-
-@media (min-width:1300px) {
-    #contents {max-width: 1200px; margin-right: auto; margin-left: auto;}
-}

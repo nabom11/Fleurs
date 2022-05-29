@@ -59,6 +59,18 @@ nav .sub>li {
 .writeBtn a {padding:6px 9px; background: #ffaf38; color:#fff; font-weight:bold; font-size: 15px; transition-duration: 0.4s;}
 .writeBtn a:hover {background:#f1a12c;}
 
+/* 글쓰기 */
+.boardRegister {margin:0 auto 10px;}
+.boardRegister tr td {padding: 7px 0;}
+.registerTitle td:first-child {max-width:763px;}
+.registerTitle input {border:none; border-radius:4px; outline:1px solid #ffc9ba; height: 30px; padding-left:5px; width:100%;}
+.registerTitle input:focus {outline: 1px solid #ffc9ba;}
+
+/* 등록, 목록 버튼 */
+.btnWrap {text-align:center;}
+.boardBtn {background: #ffa38a; border:none; color:#fff; padding: 5px 10px; margin-left:5px; cursor:pointer; font-weight:bold;}
+.boardBtn2 {background: #b7b7b7; border:none; color:#fff; padding: 5px 10px; margin-left:5px; cursor:pointer; font-weight:bold;}
+
 
 
 footer {

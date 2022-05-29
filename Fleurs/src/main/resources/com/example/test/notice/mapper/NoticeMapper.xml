@@ -5,6 +5,19 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.example.test.notice.mapper.NoticeMapper">
 
+	<insert id="noticeRegister">
+		INSERT INTO Notice 
+			 ( 
+			   title, 
+			   content
+			 )
+		VALUES 
+		     (
+		       #{title}, 
+		       #{content}
+		     )
+	</insert>
+	
 	<!-- <insert id="insert">
 		INSERT INTO user 
 			 ( 
@@ -26,15 +39,15 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		     )
 	</insert> -->
 
-	<!-- <select id="read" resultType="org.hdcd.domain.Board">
-		SELECT board_no AS boardNo, 
-			   title, 
-			   content, 
-			   writer, 
-			   reg_date AS regDate
-		  FROM board
-		 WHERE board_no = #{boardNo}
-	</select> -->
+	<select id="noticeRead" resultType="com.example.test.notice.domain.Notice">
+		SELECT noticeNO AS noticeNo, 
+	 		   title, 
+	 		   content, 
+	 		   views,
+	 		   writeDate
+		  FROM Notice
+		 WHERE noticeNO = #{noticeNo}
+	</select>
 
 	<!-- <update id="update">
 		UPDATE board 

@@ -6,9 +6,9 @@ import com.example.test.notice.domain.Notice;
 
 public interface NoticeService {
 
-	public void register(Notice notice) throws Exception;
+	public void noticeRegister(Notice notice) throws Exception;
 
-	public Notice read(Integer noticeNo) throws Exception;
+	public Notice noticeRead(Integer noticeNo) throws Exception;
 
 	public void modify(Notice notice) throws Exception;
 

@@ -1,7 +1,6 @@
 package com.example.test.notice.domain;
 
 import java.sql.Date;
-import java.time.LocalDateTime;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -16,6 +15,6 @@ public class Notice {
 	private String title;
 	private String content;
 	private int views;
-	private Date  writeDate;
+	private Date writeDate;
 
 }

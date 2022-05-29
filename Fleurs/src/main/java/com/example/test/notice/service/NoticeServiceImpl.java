@@ -15,13 +15,13 @@ public class NoticeServiceImpl implements NoticeService {
 	private final NoticeMapper mapper;
 
 	@Override
-	public void register(Notice notice) throws Exception {
-		mapper.create(notice);
+	public void noticeRegister(Notice notice) throws Exception {
+		mapper.noticeRegister(notice);
 	}
 
 	@Override
-	public Notice read(Integer noticeNo) throws Exception {
-		return mapper.read(noticeNo);
+	public Notice noticeRead(Integer noticeNo) throws Exception {
+		return mapper.noticeRead(noticeNo);
 	}
 
 	@Override

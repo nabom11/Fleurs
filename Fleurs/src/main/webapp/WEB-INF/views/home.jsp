@@ -17,6 +17,14 @@
     
 	<%@include file="includes/header.jsp" %>
 	
+	
+    
+    <div class="fix_top">
+        <div class="wel">
+            <p>Fleurs</p>
+        </div>
+    </div>
+	
     <div class="scroll_cts">
         <div id="contents">
             <div class="today">

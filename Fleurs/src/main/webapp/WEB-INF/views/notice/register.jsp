@@ -7,14 +7,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fleurs</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-	<link href="/css/subStyle.css" rel="stylesheet" type="text/css">
-	<script src="/js/jquery-3.3.1.min.js"></script>
-	<script src="/js/script.js"></script>
-	<script src="/js/summernote/summernote-lite.js"></script>
-	<script src="/js/summernote/lang/summernote-ko-KR.js"></script>
-	<link rel="stylesheet" href="/css/summernote/summernote-lite.css">
+	
 </head>
 <body>
     
@@ -23,7 +16,7 @@
 	<div id="container">
 		<h2 class="boardTitle">공지사항 등록</h2>
 		
-		<form:form modelAttribute="notice" action="register" id="notice" method="POST">
+		<form:form modelAttribute="notice" action="register" id="notice">
 			<table class="boardRegister">
 				<tr class="registerTitle">
 					<td>제목</td>

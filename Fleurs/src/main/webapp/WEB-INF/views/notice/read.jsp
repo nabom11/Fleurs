@@ -2,20 +2,14 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <html>
-<head>
-	<title>Notice</title>
-</head>
-
-<script src="/js/jQuery-3.3.1.min.js"></script>
 
 <body>
 
 	<%@include file="../includes/subHeader.jsp" %>
 	
 	<div id="container">
-		<!-- <h2 th:text="#{board.header.read}">회원게시판 상세보기</h2> -->
 		
-		<form:form modelAttribute="notice" id="notice" action="read"method="POST" class="readForm">
+		<form:form modelAttribute="notice" id="notice" action="read" method="POST" class="readForm">
 			<form:hidden path="noticeNo" />
 			<%-- <input type="hidden" name="boardNo" th:field="*{boardNo}" />
 			<input type="hidden" name="page" th:value="${pgrq.page}" />
@@ -25,12 +19,13 @@
 			<input type="hidden" name="keyword" th:value="${pgrq.keyword}" /> --%>
 		
 			<div class="readTop">
-				<h2 class="readTitle">${noticeList.title }</h2>
+				<h2 class="readTitle">${notice.title }</h2>
 				<!-- <div class="readWriter">작성자 <span th:text="*{writer}" ></span></div> -->
 			</div>
 			
 			<div class="readContent">
-				[(*${noticeList.content })]
+				<%-- [(*${noticeList.content })] --%>
+				${notice.content }
 			</div>
 		</form:form>
 		

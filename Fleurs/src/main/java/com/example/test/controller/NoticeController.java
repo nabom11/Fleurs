@@ -75,4 +75,9 @@ public class NoticeController {
 	public void list(Model model) throws Exception {
 		model.addAttribute("noticeList", service.noticeList());
 	}
+	
+	@GetMapping("/read")
+	public void read(@RequestParam("noticeNo") int noticeNo, Model model) throws Exception {
+		model.addAttribute(service.noticeRead(noticeNo));
+	}
 }

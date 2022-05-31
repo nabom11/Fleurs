@@ -39,8 +39,8 @@
 				<c:otherwise>
 					<c:forEach items="${noticeList}" var="notice">
 						<li>
-							<div>${notice.noticeNO}</div>
-							<div><a href=''>${notice.title}</a></div>
+							<div>${notice.noticeNo}</div>
+							<div><a href='/notice/read?noticeNo=${notice.noticeNo}'>${notice.title}</a></div>
 							<div>${notice.views }</div>
 							<div>${notice.writeDate}</div>
 						</li>

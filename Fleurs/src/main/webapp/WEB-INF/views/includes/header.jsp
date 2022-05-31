@@ -24,9 +24,9 @@
                     </ul>
                 </li>
                 <li><a href="#">PRODUCT</a></li>
-                <li><a href="#">COMMUNITY</a>
+                <li>COMMUNITY
                     <ul class="sub">
-                        <li><a href="../notice/list.jsp">공지사항</a></li>
+                        <li><a href="../notice/list">공지사항</a></li>
                         <li><a href="#">자유게시판</a></li>
                     </ul>
                 </li>
@@ -48,9 +48,9 @@
                     </ul>
                 </li>
                 <li><a href="#">PRODUCT</a></li>
-                <li><a href="#">COMMUNITY</a>
+                <li>COMMUNITY
                     <ul class="sub">
-                        <li><a href="#">공지사항</a></li>
+                        <li><a href="../notice/list">공지사항</a></li>
                         <li><a href="#">자유게시판</a></li>
                     </ul>
                 </li>

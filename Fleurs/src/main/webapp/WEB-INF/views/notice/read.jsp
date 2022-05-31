@@ -10,55 +10,72 @@
 
 <body>
 
+	<%@include file="../includes/subHeader.jsp" %>
+	
 	<div id="container">
-		<!-- <h2 th:text="#{notice.header.read}">공지사항 상세보기</h2> -->
+		<!-- <h2 th:text="#{board.header.read}">회원게시판 상세보기</h2> -->
 		
-		<form id="notice" action="list.html" th:action="@{/notice/remove}" th:object="${notice}" method="POST">
-			<input type="hidden" name="noticeNo" th:field="*{noticeNo}" />
+		<form:form modelAttribute="notice" id="notice" action="read"method="POST" class="readForm">
+			<form:hidden path="noticeNo" />
+			<%-- <input type="hidden" name="boardNo" th:field="*{boardNo}" />
+			<input type="hidden" name="page" th:value="${pgrq.page}" />
+			<input type="hidden" name="sizePerPage" th:value="${pgrq.sizePerPage}" />
 			
-			<div class="noticeTop">
-				<div>공지</div><h2 th:text="*{title}" class="noticeTitle">글제목</h2>
+			<input type="hidden" name="searchType" th:value="${pgrq.searchType}" />
+			<input type="hidden" name="keyword" th:value="${pgrq.keyword}" /> --%>
+		
+			<div class="readTop">
+				<h2 class="readTitle">${noticeList.title }</h2>
 				<!-- <div class="readWriter">작성자 <span th:text="*{writer}" ></span></div> -->
 			</div>
 			
 			<div class="readContent">
-				[(*{content})]
+				[(*${noticeList.content })]
 			</div>
+		</form:form>
 		
-		</form>
+		<%-- <div th:with="pinfo=${#authentication.principal}">
+			
+			<th:block sec:authorize="hasRole('ADMIN')">
+				<button type="submit" id="btnRemove" th:text="#{action.remove}" class="boardBtn2">삭제</button>
+			</th:block>
 		
-		<div>
-			<button type="submit" id="btnEdit" th:text="#{action.edit}">편집</button>
-			<button type="submit" id="btnRemove" th:text="#{action.remove}">삭제</button>
-			<button class="boardBtn2"><a href="../board/list.html" th:href="@{/board/list}" th:text="#{action.list}" >목록으로</a></button>
-		</div>
+			<th:block sec:authorize="hasRole('MEMBER')">
+		       <th:block th:if="${pinfo.username eq board.writer}">
+		       	<button type="submit" id="btnEdit" th:text="#{action.edit}" class="boardBtn">편집</button>
+		       	<button type="submit" id="btnRemove" th:text="#{action.remove}" class="boardBtn2">삭제</button>
+		       </th:block>
+			</th:block>
 		
-		<script>
+			<button type="submit" id="btnList" th:text="#{action.list}" class="boardBtn2">목록으로</button>
+		</div> --%>
+		
+		<!-- <script>
 			$(document).ready(function() {
 		
 				var formObj = $("#notice");
 		
-				console.log(formObj);
-		
 				$("#btnEdit").on("click", function() {
-					var noticeNo = $("#noticeNo");
-					var noticeNoVal = noticeNo.val();
+					var boardNo = $("#noticeNo");
+					var boardNoVal = boardNo.val();
 					
-					self.location = "modify?noticeNo=" + noticeNoVal;
+					self.location = "/board/modify[(${pgrq.toUriString()})]" + "&boardNo=" + boardNoVal;
 				});
 		
 				$("#btnRemove").on("click", function() {
-					formObj.attr("action", "remove");
+					formObj.attr("action", "/notice/remove");
 					formObj.submit();
 				});
 		
 				$("#btnList").on("click", function() {
-					self.location = "list";
+					self.location = "/board/notice[(${pgrq.toUriString()})]";
 				});
 		
 			});
-		</script>
+		</script> -->
 	</div>
+	
+	<%@include file="../includes/footer.jsp" %>
 
 </body>
 </html>

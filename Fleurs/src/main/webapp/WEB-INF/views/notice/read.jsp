@@ -24,37 +24,26 @@
 			</div>
 			
 			<div class="readContent">
-				<%-- [(*${noticeList.content })] --%>
 				${notice.content }
 			</div>
 		</form:form>
 		
-		<%-- <div th:with="pinfo=${#authentication.principal}">
-			
-			<th:block sec:authorize="hasRole('ADMIN')">
-				<button type="submit" id="btnRemove" th:text="#{action.remove}" class="boardBtn2">삭제</button>
-			</th:block>
+		<div class="btnWrap">
+		    <button type="submit" id="btnEdit" class="boardBtn">편집</button>
+		    <button type="submit" id="btnRemove" class="boardBtn2">삭제</button>
+			<button type="submit" id="btnList" class="boardBtn2">목록으로</button>
+		</div>
 		
-			<th:block sec:authorize="hasRole('MEMBER')">
-		       <th:block th:if="${pinfo.username eq board.writer}">
-		       	<button type="submit" id="btnEdit" th:text="#{action.edit}" class="boardBtn">편집</button>
-		       	<button type="submit" id="btnRemove" th:text="#{action.remove}" class="boardBtn2">삭제</button>
-		       </th:block>
-			</th:block>
-		
-			<button type="submit" id="btnList" th:text="#{action.list}" class="boardBtn2">목록으로</button>
-		</div> --%>
-		
-		<!-- <script>
+		<script>
 			$(document).ready(function() {
 		
 				var formObj = $("#notice");
 		
 				$("#btnEdit").on("click", function() {
-					var boardNo = $("#noticeNo");
-					var boardNoVal = boardNo.val();
+					var noticeNo = $("#noticeNo");
+					var noticeNoVal = boardNo.val();
 					
-					self.location = "/board/modify[(${pgrq.toUriString()})]" + "&boardNo=" + boardNoVal;
+					self.location = "/notice/modify?noticeNo=" + noticeNoVal;
 				});
 		
 				$("#btnRemove").on("click", function() {
@@ -63,11 +52,11 @@
 				});
 		
 				$("#btnList").on("click", function() {
-					self.location = "/board/notice[(${pgrq.toUriString()})]";
+					self.location = "list";
 				});
 		
 			});
-		</script> -->
+		</script>
 	</div>
 	
 	<%@include file="../includes/footer.jsp" %>

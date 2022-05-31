@@ -63,15 +63,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 	<select id="noticeList" resultType="com.example.test.notice.domain.Notice">
 		<![CDATA[
-	 	SELECT noticeNO AS noticeNo, 
-	 		   title, 
-	 		   content, 
-	 		   views,
-	 		   writeDate
-	 	  FROM Notice 
-	     WHERE noticeNO > 0 
-	  ORDER BY noticeNO DESC, 
-	  		   writeDate DESC
+	 	SELECT *
+	    FROM  (SELECT  
+	           @ROWNUM := @ROWNUM + 1 AS ROWNUM,
+	           n.*
+	           FROM  notice n,
+	                 (SELECT @ROWNUM := 0 ) TMP
+	        		 ORDER BY  writeDate ASC)SUB 
+			   ORDER BY SUB.ROWNUM DESC
 		]]>
 	</select>
 

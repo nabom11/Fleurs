@@ -11,6 +11,7 @@ import lombok.ToString;
 @ToString
 public class Notice {
 
+	private int ROWNUM;
 	private int noticeNo;
 	private String title;
 	private String content;

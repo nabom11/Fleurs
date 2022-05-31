@@ -16,7 +16,7 @@
 	<div id="container">
 		<h2 class="boardTitle">공지사항 등록</h2>
 		
-		<form:form modelAttribute="notice" action="register" id="notice">
+		<form:form modelAttribute="notice" action="register" id="notice" method="POST">
 			<table class="boardRegister">
 				<tr class="registerTitle">
 					<td>제목</td>
@@ -25,7 +25,7 @@
 				</tr>
 				<tr>
 					<td>내용</td>
-					<td><textarea name="editordata" id="summernote"></textarea></td>
+					<td><textarea name="content" id="summernote"></textarea></td>
 					<td><font color="red"><form:errors path="content" /></font></td>
 				</tr>
 			</table>

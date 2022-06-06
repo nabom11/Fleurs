@@ -31,7 +31,7 @@
                     </div>
                 </div>
                 <div class="right">
-                    <img src="img/logo.png" width="150" alt="">  
+                    <img src="/img/logo.png" width="150" alt="">  
                 </div>
             </div>
         </footer>

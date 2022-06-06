@@ -10,7 +10,7 @@ public interface NoticeMapper {
 
 	public Notice noticeRead(Integer noticeNo) throws Exception;
 
-	public void update(Notice notice) throws Exception;
+	public void noticeModify(Notice notice) throws Exception;
 
 	public void delete(Integer noticeNo) throws Exception;
 

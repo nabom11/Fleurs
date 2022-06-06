@@ -6,6 +6,7 @@ import java.io.InputStream;
 import java.util.UUID;
 
 import org.apache.commons.io.FileUtils;
+import org.hdcd.domain.Board;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,8 +37,6 @@ public class NoticeController {
 	@PostMapping("/register")
 	public String register(Notice notice, Model model) throws Exception {
 		service.noticeRegister(notice);
-
-		model.addAttribute("msg", "등록이 완료되었습니다.");
 
 		return "redirect:/notice/list";
 	}
@@ -79,5 +78,17 @@ public class NoticeController {
 	@GetMapping("/read")
 	public void read(@RequestParam("noticeNo") int noticeNo, Model model) throws Exception {
 		model.addAttribute(service.noticeRead(noticeNo));
+	}
+	
+	@GetMapping("/modify")
+	public void modifyForm(int noticeNo, Model model) throws Exception {
+		model.addAttribute(service.noticeRead(noticeNo));
+	}
+
+	@PostMapping("/modify")
+	public String modify(Notice notice, Model model) throws Exception {
+		service.noticeModify(notice);
+
+		return "redirect:/notice/read";
 	}
 }

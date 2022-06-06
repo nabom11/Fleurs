@@ -41,7 +41,7 @@
 		
 				$("#btnEdit").on("click", function() {
 					var noticeNo = $("#noticeNo");
-					var noticeNoVal = boardNo.val();
+					var noticeNoVal = noticeNo.val();
 					
 					self.location = "/notice/modify?noticeNo=" + noticeNoVal;
 				});

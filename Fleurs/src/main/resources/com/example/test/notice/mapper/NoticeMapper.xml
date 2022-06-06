@@ -49,17 +49,17 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		 WHERE noticeNO = #{noticeNo}
 	</select>
 
-	<update id="update">
+	<update id="noticeModify">
 		UPDATE notice 
 		   SET title = #{title}, 
 		       content = #{content}
 		 WHERE noticeNO = #{noticeNo}
 	</update>
 
-	<!-- <delete id="delete">
-		DELETE FROM board 
-		 WHERE board_no = #{boardNo}
-	</delete> -->
+	<delete id="noticeRemove">
+		DELETE FROM notice
+		 WHERE noticeNO = #{noticeNo}
+	</delete>
 
 	<select id="noticeList" resultType="com.example.test.notice.domain.Notice">
 		<![CDATA[

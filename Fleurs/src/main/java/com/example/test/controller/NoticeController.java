@@ -6,7 +6,6 @@ import java.io.InputStream;
 import java.util.UUID;
 
 import org.apache.commons.io.FileUtils;
-import org.hdcd.domain.Board;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -89,6 +88,13 @@ public class NoticeController {
 	public String modify(Notice notice, Model model) throws Exception {
 		service.noticeModify(notice);
 
-		return "redirect:/notice/read";
+		return "/notice/read";
+	}
+	
+	@PostMapping("/remove")
+	public String remove(@RequestParam("noticeNo") int noticeNo, Model model) throws Exception {
+		service.noticeRemove(noticeNo);
+
+		return "redirect:/notice/list";
 	}
 }

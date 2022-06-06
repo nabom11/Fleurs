@@ -52,7 +52,7 @@
 				});
 		
 				$("#btnList").on("click", function() {
-					self.location = "list";
+					self.location = "/notice/list";
 				});
 		
 			});

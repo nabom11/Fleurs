@@ -12,7 +12,7 @@ public interface NoticeMapper {
 
 	public void noticeModify(Notice notice) throws Exception;
 
-	public void delete(Integer noticeNo) throws Exception;
+	public void noticeRemove(Integer noticeNo) throws Exception;
 
 	public List<Notice> noticeList() throws Exception;
 

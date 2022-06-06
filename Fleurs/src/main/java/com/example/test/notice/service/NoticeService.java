@@ -12,7 +12,7 @@ public interface NoticeService {
 
 	public void noticeModify(Notice notice) throws Exception;
 
-	public void remove(Integer noticeNo) throws Exception;
+	public void noticeRemove(Integer noticeNo) throws Exception;
 
 	public List<Notice> noticeList() throws Exception;
 

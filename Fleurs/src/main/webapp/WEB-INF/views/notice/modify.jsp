@@ -26,7 +26,7 @@
 				</tr>
 				<tr>
 					<td>내용</td>
-					<td><textarea name="content" id="summernote" path="content"></textarea></td>
+					<td><textarea name="content" id="summernote">${notice.content }</textarea></td>
 					<td><font color="red"><form:errors path="content" /></font></td>
 				</tr>
 			</table>
@@ -101,7 +101,7 @@
 				});
 		
 				$("#btnList").on("click", function() {
-					self.location = "list";
+					self.location = "/notice/list";
 				});
 		
 			});

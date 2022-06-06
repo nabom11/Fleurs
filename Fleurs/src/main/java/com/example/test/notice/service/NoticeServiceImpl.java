@@ -30,8 +30,8 @@ public class NoticeServiceImpl implements NoticeService {
 	}
 
 	@Override
-	public void remove(Integer noticeNo) throws Exception {
-		mapper.delete(noticeNo);
+	public void noticeRemove(Integer noticeNo) throws Exception {
+		mapper.noticeRemove(noticeNo);
 	}
 
 	@Override
